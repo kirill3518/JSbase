@@ -1,1 +1,1 @@
-JSbase
+Базовый курс JavaScript
