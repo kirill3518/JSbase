@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Необязательное задание.
+
+Необходимо реализовать функцию, которая будет принимать первым аргументом
+целое положительное число, в следующих трех аргументах функция принимает слова
+в разных склонениях.
+Функция должна возвращать одно из трех переданных в параметры слов подходящее
+под число, которое передано первым аргументом.
+
+Пример:
+console.log(declOfNumber(1, "яблоко", "яблока", "яблок")); // "яблоко"
+console.log(declOfNumber(2, "мяч", "мяча", "мячей")); // "мяча"
+console.log(declOfNumber(5, "стул", "стула", "стульев")); // "стульев"
+
+Функция должна работать с любым словом и любым целым положительным числом.
+Все аргументы, которые будут передаваться функции будут верны.
+-->
+  <script>
+    "use strict";
+
+    /**
+    * Возвращает склонение по заданному номеру.
+    * @function
+    * @name declOfNumber
+    * @param {number} num - Номер склонения.
+    * @param {string} decl1 - Первое склонение.
+    * @param {string} decl2 - Второе склонение.
+    * @param {string} decl3 - Третье склонение.
+    * @returns {number} - Склонение.
+    */
+    function declOfNumber(num, decl1, decl2, decl3) {
+      if (num == 1) {
+        return decl1;
+      }
+      else if (num == 2) {
+        return decl2;
+      }
+      else if (num >= 3) {
+        return decl3;
+      }
+    }
+
+    const numb = Number(prompt("Введите число от 1 до 3."));
+    const declin1 = prompt("Введите первое склонение");
+    const declin2 = prompt("Введите второе склонение");
+    const declin3 = prompt("Введите третье склонение");
+
+    console.log(`Склонение: ${declOfNumber(numb, declin1, declin2, declin3)}.`);
+
+  </script>
+</body>
+
+</html>
